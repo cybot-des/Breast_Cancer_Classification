@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+{% block content %}
+    <br/>
+    <br/>
+    <div align="center" >
+        <div style="background-color:rgba(255,255,255,0.6)">
+            <h1>{{ result }}</h1>
+            {% if result == "Cancer is Benign" %}
+                <hr color="red">
+                <div class="card" style="width: 18rem;">
+                  <img class="card-img-top" src="static/images/Benign.JPG" alt="Card image cap">
+                  <div class="card-body">
+                    <p class="card-text">Benign cancer is not a serious type of cancer but if not treated might turn into malignant
+                    and might also supress the structure of other tissues which might cause serious discomfort.</p>
+                  </div>
+                 </div>
+                 <br/><br/><br/>
+
+            {% else %}
+                <hr color="red">
+                <div class="card" style="width: 18rem;">
+                  <img class="card-img-top" src="static/images/malignant.jpg" alt="Card image cap">
+                  <div class="card-body">
+                    <p class="card-text">Malignant cancer is more serious type of cancer & should be treated as soon as possible.Delayed treatment
+                    causes undue damages and might affect the possiblity of getting rid of it.</p>
+                  </div>
+                </div>
+
+            <br/><br/><br/>
+
+            {% endif %}
+        </div>
+    </div>
+{% endblock %}

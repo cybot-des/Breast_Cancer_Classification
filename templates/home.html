@@ -1,0 +1,89 @@
+{% extends "base.html" %}
+{% block content %}
+
+    <div class="mx-auto text-center mt-5">
+      <form action="http://127.0.0.1:5000/result" method="POST">
+        <table border=2 align="center" cellpadding="15px"  style="background-color:rgba(255,255,255,0.6)">
+            <tr>
+                <th><big>Feature</big></th>
+                <th><big>Score</big></th>
+            </tr>
+            <!--Feature1-->
+            <tr>
+                <td><b>Clump Thickness</b></td>
+                <td><input type="number" max=10 min=1 name="data1" required></td>
+            </tr>
+            <!--Feature2-->
+            <tr>
+                <td><b>Uniformity of Cell Size</b></td>
+                <td><input type="number" max=10 min=1 name="data2" required></td>
+            </tr>
+            <!--Feature3-->
+            <tr>
+                <td><b>Uniformity of Cell Shape</b></td>
+                <td><input type="number" max=10 min=1 name="data3" required></td>
+            </tr>
+            <!--Feature4-->
+            <tr>
+                <td><b>Marginal Adhesion</b></td>
+                <td><input type="number" max=10 min=1 name="data4" required></td>
+            </tr>
+            <!--Feature5-->
+            <tr>
+                <td><b>Single Epithelial Cell Size</b></td>
+                <td><input type="number" max=10 min=1 name="data5" required></td>
+            </tr>
+            <!--Feature6-->
+            <tr>
+                <td><b>Bare Nuclei</b></td>
+                <td><input type="number" max=10 min=1 name="data6" required></td>
+            </tr>
+            <!--Feature7-->
+            <tr>
+                <td><b>Bland Chromatin</b></td>
+                <td><input type="number" max=10 min=1 name="data7" required></td>
+            </tr>
+            <!--Feature8-->
+            <tr>
+                <td><b>Normal Nucleoli</b></td>
+                <td><input type="number" max=10 min=1 name="data8" required></td>
+            </tr>
+            <!--Feature9-->
+            <tr>
+                <td><b>Mitoses</b></td>
+                <td><input type="number" max=10 min=1 name="data9" required></td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="submit" class="btn btn-outline-danger" value="Submit">
+                </td>
+                <td>
+                    &nbsp;
+                </td>
+            </tr>
+        </table>
+      </form>
+
+      <h3>{{ prediction_text }}</h3>
+
+<!--    </div>-->
+<!--    <div class="container">-->
+<!--        <div class="row g-3">-->
+<!--          <div class="col">-->
+<!--            <input type="text" class="form-control" placeholder="First name" aria-label="First name">-->
+<!--          </div>-->
+<!--          <div class="col">-->
+<!--            <input type="text" class="form-control" placeholder="Last name" aria-label="Last name">-->
+<!--          </div>-->
+<!--        </div>-->
+<!--        <div class="row g-3">-->
+<!--          <div class="col">-->
+<!--            <input type="text" class="form-control" placeholder="First name" aria-label="First name">-->
+<!--          </div>-->
+<!--          <div class="col">-->
+<!--            <input type="text" class="form-control" placeholder="Last name" aria-label="Last name">-->
+<!--          </div>-->
+<!--        </div>-->
+<!--    </div>-->
+
+{% endblock %}
